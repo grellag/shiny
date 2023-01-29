@@ -1,0 +1,66 @@
+@use 'variables';
+
+body {
+    font-family: variables.$font-stack;
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: variables.$card-color;
+    padding: 1rem 1.25rem;
+    margin: 1rem auto;
+    border: variables.$card-border;
+    border-radius: variables.$card-border-radius;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+
+    .card_title, #out_histogram_title {
+        color: variables.$text-color-light;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.card:hover {
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4);
+}
+
+.app-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: row;
+    background-color: variables.$card-color;
+    padding: 1rem 1.25rem;
+    margin: 1rem auto;
+
+    .shiny-input-container:first-child {
+        margin-right: 3rem;
+    }
+}
+
+table.shiny-table {
+    width: 100% !important;
+    text-align: center;
+
+    thead {
+        text-align: center !important;
+
+        tr {
+            text-align: center !important;
+        }
+    }
+}
